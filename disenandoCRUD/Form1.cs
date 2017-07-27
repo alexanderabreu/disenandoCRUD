@@ -10,12 +10,12 @@ using System.Windows.Forms;
 using System.Data.SQLite;
 
 
+
 namespace disenandoCRUD
 {
     public partial class frmInsertarEmpelado : Form
     {
-        SQLiteConnection conexion;
-
+      
         public frmInsertarEmpelado()
         {
             InitializeComponent();
@@ -23,40 +23,66 @@ namespace disenandoCRUD
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
+                                // Conexion a la base de dato
+                                
+            SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
             try
-
-           
-            {
-                SQLiteConnection conex = new SQLiteConnection("Data Source==C:\\DB\nomina.s3db");
-
-                conex.Open();
+            { 
+            conn.Open();
                 MessageBox.Show("Conexion hecha");
             }
-            
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Hubo un error");
+                MessageBox.Show(ex.Message, "Error en la conexion");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+    
+                   // Insertar datos a la base de datos
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
+
+            try
+            {
+                conn.Open();
+                MessageBox.Show("Registrada correctamente");
+
+                string nom = tbxNombre.Text;
+                string apel = tbxApellido.Text;
+                string ced = tbxCedula.Text;
+                string sex = tbxSexo.Text;
+                string sal = tbxSalario.Text;
+                string fk_id_cargo = txtfkidcargo.Text;
+                string nac = tbxFechanacimiento.Text;
+                string ingr = tbxFechaingreso.Text;
+
+                string sql = "insert into empleado(nombre_empleado, apellido_empleado, cedula_empleado, sexo_empleado, salario_empleado, fk_id_cargo, Fecha_ingreso, Fecha_nacimiento) values('" + nom + "','" + apel + "','" + ced + "','" + sex + "','" + sal + "','" + fk_id_cargo + "','"+nac+"','"+ingr+"') ";
+                SQLiteCommand cmd = new SQLiteCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error en registro");
             }
 
-            string nom = this.tbxNombre.Text;
-            string apell = this.tbxApellido.Text;
-            string ced = this.tbxCedula.Text;
-            string sex = this.tbxSexo.Text;
-            string nac = this.tbxFechanacimiento.Text;
-            string ingr = this.tbxFechaingreso.Text;
-            string sal = this.tbxSalario.Text;
-            string edad = this.tbxCalcularedad.Text;
-            string antig = this.tbxCalcularantiguedad.Text;
-            string sql = "INSERT INTO empleado(Nombre,Apellido,Cedula, Sexo, Fecha_nac,Fecha_ingreso,Salario) values('"+nom+"','"+apell+"','"+ced+"','"+sex+"','"+nac+"','"+ingr+"','"+sal+"')";
+            finally
+            { 
 
-            SQLiteCommand cmd = new SQLiteCommand(sql, conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+                conn.Close();
+            }
+        }
+                
+             
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
+
+

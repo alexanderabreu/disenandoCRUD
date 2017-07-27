@@ -11,7 +11,7 @@ namespace disenandoCRUD
 
     public class operacion
     {
-        private string conn = ("Data Source=C:\\DB\\nomina.s3db;Version=3;");
+        private string conn = ("Data Source=C:\\DB\\nominaCRUD.sqlite");
         public SQLiteConnection cn;
         private SQLiteCommandBuilder cmb;
         public DataSet ds = new DataSet();
@@ -102,3 +102,4 @@ namespace disenandoCRUD
             }
         }
     }
+}
