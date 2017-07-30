@@ -11,7 +11,9 @@ using System.Data.SQLite;
 
 namespace disenandoCRUD
 {
-    public partial class Cargo : Form
+    // CREANDO EL CRUD PARA LA TABLA DE CARGO
+
+    public partial class Cargo : Form    
     {
         public Cargo()
         {
@@ -20,7 +22,10 @@ namespace disenandoCRUD
 
         private void Cargo_Load(object sender, EventArgs e)
         {
+                // CREANDO LA CONEXION A LA BASE DE DATOS
             SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
+
+            // AGREGANDO EL CAPTURADOR DE ERROR
             try
             {
                 conn.Open();

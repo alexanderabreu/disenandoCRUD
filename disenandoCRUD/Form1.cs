@@ -23,8 +23,8 @@ namespace disenandoCRUD
 
         private void Form1_Load(object sender, EventArgs e)
         {
-                                // Conexion a la base de dato
-                                
+            // Conexion a la base de dato + INSERTANDO UN DETECTOR DE ERROR PARA MOSTRAR ESTATUS DE LA CONEXION A LA BASE DE DATOS
+
             SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
             try
             { 
@@ -47,6 +47,7 @@ namespace disenandoCRUD
         {
             SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
 
+            //INSERTANDO UN DETECTOR DE ERROR PARA MOSTRAR ESTATUS DE LA CONEXION A LA BASE DE DATOS
             try
             {
                 conn.Open();
@@ -65,9 +66,9 @@ namespace disenandoCRUD
                 SQLiteCommand cmd = new SQLiteCommand(sql, conn);
                 cmd.ExecuteNonQuery();
 
-                frmEmpleado DTGV = new frmEmpleado();
-                DTGV.ShowDialog();
-                this.Enabled = true;
+                //frmEmpleado DTGV = new frmEmpleado();
+                //DTGV.ShowDialog();
+                //this.Enabled = true;
 
             }
             catch (Exception ex)
@@ -90,6 +91,8 @@ namespace disenandoCRUD
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+
+            //LLAMANDO AL FORMULARIO MostrarDatos
             frmEmpleado DTGV = new frmEmpleado();
             DTGV.ShowDialog();
             this.Enabled = true;
@@ -98,6 +101,22 @@ namespace disenandoCRUD
         private void btnCrear_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void txtfkidcargo_TextChanged(object sender, EventArgs e)
+        {
+            //LLAMANDO AL FORMULARIO Cargo desde el txt fkidcargo
+            Cargo krgo = new Cargo();
+            krgo.ShowDialog();
+            this.Enabled = true;
+        }
+
+        //EVENTO DE DOBLE CLICK SOBRE EL LABEL Id_cargo para que muestre un Windows Form y DataGView con todos los cargos. 
+        private void label9_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Cargo krgo = new Cargo();
+            krgo.ShowDialog();
+            this.Enabled = true;
         }
     }
 }

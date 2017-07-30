@@ -95,6 +95,7 @@
             this.txtfkidcargo.Name = "txtfkidcargo";
             this.txtfkidcargo.Size = new System.Drawing.Size(163, 20);
             this.txtfkidcargo.TabIndex = 15;
+            this.txtfkidcargo.TextChanged += new System.EventHandler(this.txtfkidcargo_TextChanged);
             // 
             // label9
             // 
@@ -104,6 +105,7 @@
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 14;
             this.label9.Text = "Id_cargo";
+            this.label9.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.label9_MouseDoubleClick);
             // 
             // pictureBox1
             // 
