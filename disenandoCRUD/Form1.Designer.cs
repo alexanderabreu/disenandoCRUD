@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtfkidcargo = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@
             this.frmEmpleado = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtfkidcargo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -88,6 +88,22 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales";
+            // 
+            // txtfkidcargo
+            // 
+            this.txtfkidcargo.Location = new System.Drawing.Point(94, 202);
+            this.txtfkidcargo.Name = "txtfkidcargo";
+            this.txtfkidcargo.Size = new System.Drawing.Size(163, 20);
+            this.txtfkidcargo.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(15, 204);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 13);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Id_cargo";
             // 
             // pictureBox1
             // 
@@ -282,6 +298,7 @@
             this.btnCrear.TabIndex = 3;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // btnBorrar
             // 
@@ -298,7 +315,7 @@
             this.frmEmpleado.Name = "frmEmpleado";
             this.frmEmpleado.Size = new System.Drawing.Size(75, 23);
             this.frmEmpleado.TabIndex = 5;
-            this.frmEmpleado.Text = "Guardar";
+            this.frmEmpleado.Text = "Registrar";
             this.frmEmpleado.UseVisualStyleBackColor = true;
             this.frmEmpleado.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -310,6 +327,7 @@
             this.btnActualizar.TabIndex = 6;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnCerrar
             // 
@@ -320,22 +338,6 @@
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 204);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 13);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Id_cargo";
-            // 
-            // txtfkidcargo
-            // 
-            this.txtfkidcargo.Location = new System.Drawing.Point(94, 202);
-            this.txtfkidcargo.Name = "txtfkidcargo";
-            this.txtfkidcargo.Size = new System.Drawing.Size(163, 20);
-            this.txtfkidcargo.TabIndex = 15;
             // 
             // frmInsertarEmpelado
             // 

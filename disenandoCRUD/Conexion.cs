@@ -55,6 +55,9 @@ namespace disenandoCRUD
             }
 
         }
+
+       
+
         //Codigo para actualizar
         public bool actualizar(string tabla, string campos, string condicion)
         {

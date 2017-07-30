@@ -1,6 +1,6 @@
 ﻿namespace disenandoCRUD
 {
-    partial class MostrarDatos
+    partial class frmEmpleado
     {
         /// <summary>
         /// Required designer variable.
@@ -45,6 +45,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +66,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(842, 447);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Id
             // 
@@ -127,7 +129,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(217, 12);
+            this.radioButton2.Location = new System.Drawing.Point(154, 14);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(62, 17);
             this.radioButton2.TabIndex = 2;
@@ -138,7 +140,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(126, 12);
+            this.radioButton3.Location = new System.Drawing.Point(86, 15);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(62, 17);
             this.radioButton3.TabIndex = 3;
@@ -148,7 +150,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(327, 13);
+            this.textBox1.Location = new System.Drawing.Point(232, 13);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(202, 20);
             this.textBox1.TabIndex = 4;
@@ -156,16 +158,17 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(578, 9);
+            this.btnBuscar.Location = new System.Drawing.Point(486, 11);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(681, 9);
+            this.btnImprimir.Location = new System.Drawing.Point(590, 11);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(75, 23);
             this.btnImprimir.TabIndex = 6;
@@ -174,18 +177,30 @@
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(779, 9);
+            this.btnCrear.Location = new System.Drawing.Point(682, 12);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(75, 23);
             this.btnCrear.TabIndex = 7;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
-            // MostrarDatos
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(779, 13);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 8;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(878, 509);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnBuscar);
@@ -194,8 +209,9 @@
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "MostrarDatos";
-            this.Text = "MostrarDatos";
+            this.Name = "frmEmpleado";
+            this.Text = "Empleado";
+            this.Load += new System.EventHandler(this.frmEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -221,5 +237,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

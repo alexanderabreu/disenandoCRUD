@@ -64,6 +64,11 @@ namespace disenandoCRUD
                 string sql = "insert into empleado(nombre_empleado, apellido_empleado, cedula_empleado, sexo_empleado, salario_empleado, fk_id_cargo, Fecha_ingreso, Fecha_nacimiento) values('" + nom + "','" + apel + "','" + ced + "','" + sex + "','" + sal + "','" + fk_id_cargo + "','"+nac+"','"+ingr+"') ";
                 SQLiteCommand cmd = new SQLiteCommand(sql, conn);
                 cmd.ExecuteNonQuery();
+
+                frmEmpleado DTGV = new frmEmpleado();
+                DTGV.ShowDialog();
+                this.Enabled = true;
+
             }
             catch (Exception ex)
             {
@@ -81,6 +86,18 @@ namespace disenandoCRUD
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            frmEmpleado DTGV = new frmEmpleado();
+            DTGV.ShowDialog();
+            this.Enabled = true;
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
