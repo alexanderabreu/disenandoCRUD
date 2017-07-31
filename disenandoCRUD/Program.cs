@@ -16,7 +16,11 @@ namespace disenandoCRUD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInsertarEmpelado());
+            Application.Run(new pantallaPrincipal());
+
+
+
+            //Application.Run(new frmInsertarEmpelado());
         }
     }
 }

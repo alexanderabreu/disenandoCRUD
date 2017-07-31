@@ -52,7 +52,7 @@ namespace disenandoCRUD
             {
                 conn.Open();
                 MessageBox.Show("Registrada correctamente");
-
+// Declarando todos los campos para cargar el formulario
                 string nom = tbxNombre.Text;
                 string apel = tbxApellido.Text;
                 string ced = tbxCedula.Text;
@@ -62,6 +62,7 @@ namespace disenandoCRUD
                 string nac = tbxFechanacimiento.Text;
                 string ingr = tbxFechaingreso.Text;
 
+                // INGRESANDO DATOS A LA BASE DE DATOS VIA CRUD
                 string sql = "insert into empleado(nombre_empleado, apellido_empleado, cedula_empleado, sexo_empleado, salario_empleado, fk_id_cargo, Fecha_ingreso, Fecha_nacimiento) values('" + nom + "','" + apel + "','" + ced + "','" + sex + "','" + sal + "','" + fk_id_cargo + "','"+nac+"','"+ingr+"') ";
                 SQLiteCommand cmd = new SQLiteCommand(sql, conn);
                 cmd.ExecuteNonQuery();
