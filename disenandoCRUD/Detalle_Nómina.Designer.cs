@@ -1,6 +1,6 @@
 ﻿namespace disenandoCRUD
 {
-    partial class Detalle_Nómina
+    partial class Ver_Detalle_Nómina
     {
         /// <summary>
         /// Required designer variable.
@@ -62,7 +62,7 @@
             this.Otros_Descuento,
             this.Total_Descuento,
             this.Salario_Neto});
-            this.dataGridView1.Location = new System.Drawing.Point(205, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(207, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(743, 517);
             this.dataGridView1.TabIndex = 0;
@@ -205,7 +205,7 @@
             this.radioButton4.Text = "Id Nómina";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
-            // Detalle_Nómina
+            // Ver_Detalle_Nómina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -213,8 +213,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Detalle_Nómina";
-            this.Text = "Detalle_Nómina";
+            this.Name = "Ver_Detalle_Nómina";
+            this.Text = "Detalles de Nómina";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

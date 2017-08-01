@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace disenandoCRUD
 {
-    public partial class Detalle_Nómina : Form
+    public partial class Ver_Detalle_Nómina : Form
     {
-        public Detalle_Nómina()
+        public Ver_Detalle_Nómina()
         {
             InitializeComponent();
         }

@@ -29,5 +29,12 @@ namespace disenandoCRUD
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Crear_detalleDeNómina fact = new Crear_detalleDeNómina();
+            fact.ShowDialog();
+            this.Enabled = true;
+        }
     }
 }
