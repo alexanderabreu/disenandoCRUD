@@ -36,5 +36,12 @@ namespace disenandoCRUD
             fact.ShowDialog();
             this.Enabled = true;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Cabecera_Nómina cabecerra = new Cabecera_Nómina();
+            cabecerra.ShowDialog();
+            this.Enabled = false;
+        }
     }
 }

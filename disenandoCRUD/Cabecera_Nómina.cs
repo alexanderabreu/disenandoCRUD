@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace disenandoCRUD
 {
@@ -35,6 +36,35 @@ namespace disenandoCRUD
               
 
             
+        }
+
+        private void btnGuardarNomina_Click(object sender, EventArgs e)
+        {
+            SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
+            try
+            { 
+            conn.Open();
+                MessageBox.Show("Nomina agregada con exito");
+            string empres = txtNokmbreempresa.Text;
+            string idnomina = txtIdDetalleNomina.Text;
+            string fini = DTPInicio.Text;
+            string final = DTPFinal.Text;
+
+            
+            string sql = "insert into nomina(id_nomina, fecha_inicio, fecha_final,  nombre_empresa) values('" + idnomina + "','" + fini + "','" + final + "','" + empres + "') ";
+            SQLiteCommand cmd = new SQLiteCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show(ex.Message, "Error al guardar nomina");
+                  
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }
