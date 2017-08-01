@@ -48,5 +48,12 @@ namespace disenandoCRUD
             cabecerra.ShowDialog();
             this.Enabled = false;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Cargo kRGO = new Cargo();
+            kRGO.ShowDialog();
+            this.Enabled = false;
+        }
     }
 }

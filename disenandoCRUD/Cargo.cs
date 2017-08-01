@@ -13,7 +13,7 @@ namespace disenandoCRUD
 {
     // CREANDO EL CRUD PARA LA TABLA DE CARGO
 
-    public partial class Cargo : Form    
+    public partial class Cargo : Form
     {
         public Cargo()
         {
@@ -22,7 +22,7 @@ namespace disenandoCRUD
 
         private void Cargo_Load(object sender, EventArgs e)
         {
-                // CREANDO LA CONEXION A LA BASE DE DATOS
+            // CREANDO LA CONEXION A LA BASE DE DATOS
             SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
 
             // AGREGANDO EL CAPTURADOR DE ERROR
@@ -43,8 +43,21 @@ namespace disenandoCRUD
 
         private void button3_Click(object sender, EventArgs e)
         {
+            SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
 
+            {
+                conn.Open();
+                string IDcargo = txtIdCargo.Text;
+                string NameCargo = txtNombrecargo.Text;
+
+                // Sentencia que agrea los datos de nomina a la base de datos
+                string sql = "insert into cargo(id_cargo, nombre_cargo) values('" + IDcargo + "','" + NameCargo + "') ";
+                SQLiteCommand cmd = new SQLiteCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
         }
     }
-    }
+}
+    
 

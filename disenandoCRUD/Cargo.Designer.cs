@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DTGVcargo = new System.Windows.Forms.DataGridView();
             this.id_cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre_cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnCrear = new System.Windows.Forms.Button();
+            this.txtNombrecargo = new System.Windows.Forms.TextBox();
+            this.txtIdCargo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DTGVcargo)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DTGVcargo
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DTGVcargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DTGVcargo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_cargo,
             this.nombre_cargo});
-            this.dataGridView1.Location = new System.Drawing.Point(10, 98);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(341, 339);
-            this.dataGridView1.TabIndex = 1;
+            this.DTGVcargo.Location = new System.Drawing.Point(10, 98);
+            this.DTGVcargo.Name = "DTGVcargo";
+            this.DTGVcargo.Size = new System.Drawing.Size(341, 339);
+            this.DTGVcargo.TabIndex = 1;
             // 
             // id_cargo
             // 
@@ -66,60 +66,60 @@
             this.nombre_cargo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.nombre_cargo.Width = 200;
             // 
-            // button4
+            // btnCerrar
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button4.Location = new System.Drawing.Point(289, 62);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(62, 30);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Cerrar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnCerrar.Location = new System.Drawing.Point(289, 62);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(62, 30);
+            this.btnCerrar.TabIndex = 4;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnActualizar
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(199, 63);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 29);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnActualizar.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnActualizar.Location = new System.Drawing.Point(199, 63);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(65, 29);
+            this.btnActualizar.TabIndex = 5;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnEliminar
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Info;
-            this.button2.Location = new System.Drawing.Point(289, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 31);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.Info;
+            this.btnEliminar.Location = new System.Drawing.Point(289, 17);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(60, 31);
+            this.btnEliminar.TabIndex = 6;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnCrear
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button3.Location = new System.Drawing.Point(198, 17);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(66, 31);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Crear";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnCrear.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnCrear.Location = new System.Drawing.Point(198, 17);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(66, 31);
+            this.btnCrear.TabIndex = 7;
+            this.btnCrear.Text = "Crear";
+            this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox1
+            // txtNombrecargo
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtNombrecargo.Location = new System.Drawing.Point(12, 72);
+            this.txtNombrecargo.Name = "txtNombrecargo";
+            this.txtNombrecargo.Size = new System.Drawing.Size(155, 20);
+            this.txtNombrecargo.TabIndex = 8;
             // 
-            // textBox2
+            // txtIdCargo
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 26);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtIdCargo.Location = new System.Drawing.Point(12, 26);
+            this.txtIdCargo.Name = "txtIdCargo";
+            this.txtIdCargo.Size = new System.Drawing.Size(100, 20);
+            this.txtIdCargo.TabIndex = 9;
             // 
             // label1
             // 
@@ -147,17 +147,17 @@
             this.ClientSize = new System.Drawing.Size(370, 439);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtIdCargo);
+            this.Controls.Add(this.txtNombrecargo);
+            this.Controls.Add(this.btnCrear);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.DTGVcargo);
             this.Name = "Cargo";
             this.Text = "Cargo";
             this.Load += new System.EventHandler(this.Cargo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DTGVcargo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,15 +165,15 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DTGVcargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_cargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_cargo;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.TextBox txtNombrecargo;
+        private System.Windows.Forms.TextBox txtIdCargo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }
