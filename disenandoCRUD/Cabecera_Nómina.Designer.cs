@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.lblInicio = new System.Windows.Forms.Label();
-            this.lblFinal = new System.Windows.Forms.Label();
+            this.lblMes = new System.Windows.Forms.Label();
+            this.lblAño = new System.Windows.Forms.Label();
             this.txtNokmbreempresa = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.DTPFinal = new System.Windows.Forms.DateTimePicker();
-            this.DTPInicio = new System.Windows.Forms.DateTimePicker();
             this.calendario = new System.Windows.Forms.MonthCalendar();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtIdDetalleNomina = new System.Windows.Forms.TextBox();
+            this.lblIdNomina = new System.Windows.Forms.Label();
+            this.txtIDnomina = new System.Windows.Forms.TextBox();
             this.btnGuardarNomina = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.cbxMes = new System.Windows.Forms.ComboBox();
+            this.cbxAño = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -56,23 +56,23 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 1;
             // 
-            // lblInicio
+            // lblMes
             // 
-            this.lblInicio.AutoSize = true;
-            this.lblInicio.Location = new System.Drawing.Point(17, 39);
-            this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(32, 13);
-            this.lblInicio.TabIndex = 3;
-            this.lblInicio.Text = "Inicio";
+            this.lblMes.AutoSize = true;
+            this.lblMes.Location = new System.Drawing.Point(17, 39);
+            this.lblMes.Name = "lblMes";
+            this.lblMes.Size = new System.Drawing.Size(27, 13);
+            this.lblMes.TabIndex = 3;
+            this.lblMes.Text = "Mes";
             // 
-            // lblFinal
+            // lblAño
             // 
-            this.lblFinal.AutoSize = true;
-            this.lblFinal.Location = new System.Drawing.Point(17, 88);
-            this.lblFinal.Name = "lblFinal";
-            this.lblFinal.Size = new System.Drawing.Size(29, 13);
-            this.lblFinal.TabIndex = 4;
-            this.lblFinal.Text = "Final";
+            this.lblAño.AutoSize = true;
+            this.lblAño.Location = new System.Drawing.Point(17, 88);
+            this.lblAño.Name = "lblAño";
+            this.lblAño.Size = new System.Drawing.Size(26, 13);
+            this.lblAño.TabIndex = 4;
+            this.lblAño.Text = "Año";
             // 
             // txtNokmbreempresa
             // 
@@ -83,13 +83,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxAño);
+            this.groupBox1.Controls.Add(this.cbxMes);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnGuardarNomina);
-            this.groupBox1.Controls.Add(this.DTPFinal);
-            this.groupBox1.Controls.Add(this.DTPInicio);
             this.groupBox1.Controls.Add(this.calendario);
-            this.groupBox1.Controls.Add(this.lblFinal);
-            this.groupBox1.Controls.Add(this.lblInicio);
+            this.groupBox1.Controls.Add(this.lblAño);
+            this.groupBox1.Controls.Add(this.lblMes);
             this.groupBox1.Location = new System.Drawing.Point(12, 95);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(573, 242);
@@ -97,20 +97,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fecha de nómina";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // DTPFinal
-            // 
-            this.DTPFinal.Location = new System.Drawing.Point(111, 82);
-            this.DTPFinal.Name = "DTPFinal";
-            this.DTPFinal.Size = new System.Drawing.Size(200, 20);
-            this.DTPFinal.TabIndex = 10;
-            // 
-            // DTPInicio
-            // 
-            this.DTPInicio.Location = new System.Drawing.Point(111, 33);
-            this.DTPInicio.Name = "DTPInicio";
-            this.DTPInicio.Size = new System.Drawing.Size(200, 20);
-            this.DTPInicio.TabIndex = 9;
             // 
             // calendario
             // 
@@ -120,8 +106,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtIdDetalleNomina);
-            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.txtIDnomina);
+            this.groupBox2.Controls.Add(this.lblIdNomina);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtNokmbreempresa);
@@ -159,21 +145,21 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Nombre Empresa";
             // 
-            // label6
+            // lblIdNomina
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(336, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "ID detalle nómina";
+            this.lblIdNomina.AutoSize = true;
+            this.lblIdNomina.Location = new System.Drawing.Point(369, 25);
+            this.lblIdNomina.Name = "lblIdNomina";
+            this.lblIdNomina.Size = new System.Drawing.Size(55, 13);
+            this.lblIdNomina.TabIndex = 7;
+            this.lblIdNomina.Text = "ID nómina";
             // 
-            // txtIdDetalleNomina
+            // txtIDnomina
             // 
-            this.txtIdDetalleNomina.Location = new System.Drawing.Point(430, 22);
-            this.txtIdDetalleNomina.Name = "txtIdDetalleNomina";
-            this.txtIdDetalleNomina.Size = new System.Drawing.Size(136, 20);
-            this.txtIdDetalleNomina.TabIndex = 8;
+            this.txtIDnomina.Location = new System.Drawing.Point(430, 22);
+            this.txtIDnomina.Name = "txtIDnomina";
+            this.txtIDnomina.Size = new System.Drawing.Size(136, 20);
+            this.txtIDnomina.TabIndex = 8;
             // 
             // btnGuardarNomina
             // 
@@ -197,6 +183,139 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cbxMes
+            // 
+            this.cbxMes.FormattingEnabled = true;
+            this.cbxMes.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cbxMes.Location = new System.Drawing.Point(86, 39);
+            this.cbxMes.Name = "cbxMes";
+            this.cbxMes.Size = new System.Drawing.Size(188, 21);
+            this.cbxMes.TabIndex = 9;
+            // 
+            // cbxAño
+            // 
+            this.cbxAño.FormattingEnabled = true;
+            this.cbxAño.Items.AddRange(new object[] {
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2026",
+            "2027",
+            "2028",
+            "2029",
+            "2030",
+            "2031",
+            "2032",
+            "2033",
+            "2034",
+            "2035",
+            "2036",
+            "2037",
+            "2038",
+            "2039",
+            "2040",
+            "2041",
+            "2042",
+            "2043",
+            "2044",
+            "2045",
+            "2046",
+            "2047",
+            "2048",
+            "2049",
+            "2050",
+            "2051",
+            "2052",
+            "2053",
+            "2054",
+            "2055",
+            "2056",
+            "2057",
+            "2058",
+            "2059",
+            "2060",
+            "2061",
+            "2062",
+            "2063",
+            "2064",
+            "2065",
+            "2066",
+            "2067",
+            "2068",
+            "2069",
+            "2070",
+            "2071",
+            "2072",
+            "2073",
+            "2074",
+            "2075",
+            "2076",
+            "2077",
+            "2078",
+            "2079",
+            "2080",
+            "2081",
+            "2082",
+            "2083",
+            "2084",
+            "2085",
+            "2086",
+            "2087",
+            "2088",
+            "2089",
+            "2090",
+            "2091",
+            "2092",
+            "2093",
+            "2094",
+            "2095",
+            "2096",
+            "2097",
+            "2098",
+            "2099",
+            "2100",
+            "2101",
+            "2102",
+            "2103",
+            "2104",
+            "2105",
+            "2106",
+            "2107",
+            "2108",
+            "2109",
+            "2110",
+            "2111",
+            "2112",
+            "2113",
+            "2114",
+            "2115",
+            "2116",
+            "2117",
+            "2118",
+            "2119",
+            "2120",
+            "2121",
+            "2122"});
+            this.cbxAño.Location = new System.Drawing.Point(86, 88);
+            this.cbxAño.Name = "cbxAño";
+            this.cbxAño.Size = new System.Drawing.Size(188, 21);
+            this.cbxAño.TabIndex = 13;
             // 
             // Cabecera_Nómina
             // 
@@ -219,20 +338,20 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblInicio;
-        private System.Windows.Forms.Label lblFinal;
+        private System.Windows.Forms.Label lblMes;
+        private System.Windows.Forms.Label lblAño;
         private System.Windows.Forms.TextBox txtNokmbreempresa;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker DTPFinal;
-        private System.Windows.Forms.DateTimePicker DTPInicio;
         private System.Windows.Forms.MonthCalendar calendario;
-        private System.Windows.Forms.TextBox txtIdDetalleNomina;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtIDnomina;
+        private System.Windows.Forms.Label lblIdNomina;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnGuardarNomina;
+        private System.Windows.Forms.ComboBox cbxAño;
+        private System.Windows.Forms.ComboBox cbxMes;
     }
 }
