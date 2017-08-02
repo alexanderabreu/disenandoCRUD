@@ -42,9 +42,9 @@ namespace disenandoCRUD
             }
 
             SQLiteDataAdapter da = new SQLiteDataAdapter("Select * from cargo", conn);
-            DataTable dt = new DataTable("Cargo");
-            da.Fill(dt);
-            DTGVcargo.DataSource = dt;
+            DataTable Tabla = new DataTable("Cargo");
+            da.Fill(Tabla);
+            DTGVcargo.DataSource = Tabla;
         }
 
         private void Cargo_Load(object sender, EventArgs e)
