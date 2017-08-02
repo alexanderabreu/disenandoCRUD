@@ -33,17 +33,16 @@
             this.lblAño = new System.Windows.Forms.Label();
             this.txtNokmbreempresa = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.calendario = new System.Windows.Forms.MonthCalendar();
+            this.cbxAño = new System.Windows.Forms.ComboBox();
+            this.cbxMes = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnGuardarNomina = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtIDnomina = new System.Windows.Forms.TextBox();
+            this.lblIdNomina = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblIdNomina = new System.Windows.Forms.Label();
-            this.txtIDnomina = new System.Windows.Forms.TextBox();
-            this.btnGuardarNomina = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cbxMes = new System.Windows.Forms.ComboBox();
-            this.cbxAño = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +86,6 @@
             this.groupBox1.Controls.Add(this.cbxMes);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnGuardarNomina);
-            this.groupBox1.Controls.Add(this.calendario);
             this.groupBox1.Controls.Add(this.lblAño);
             this.groupBox1.Controls.Add(this.lblMes);
             this.groupBox1.Location = new System.Drawing.Point(12, 95);
@@ -97,114 +95,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fecha de nómina";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // calendario
-            // 
-            this.calendario.Location = new System.Drawing.Point(339, 25);
-            this.calendario.Name = "calendario";
-            this.calendario.TabIndex = 8;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtIDnomina);
-            this.groupBox2.Controls.Add(this.lblIdNomina);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtNokmbreempresa);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(573, 78);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Información";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(164, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(98, 88);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 25);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Nombre Empresa";
-            // 
-            // lblIdNomina
-            // 
-            this.lblIdNomina.AutoSize = true;
-            this.lblIdNomina.Location = new System.Drawing.Point(369, 25);
-            this.lblIdNomina.Name = "lblIdNomina";
-            this.lblIdNomina.Size = new System.Drawing.Size(55, 13);
-            this.lblIdNomina.TabIndex = 7;
-            this.lblIdNomina.Text = "ID nómina";
-            // 
-            // txtIDnomina
-            // 
-            this.txtIDnomina.Location = new System.Drawing.Point(430, 22);
-            this.txtIDnomina.Name = "txtIDnomina";
-            this.txtIDnomina.Size = new System.Drawing.Size(136, 20);
-            this.txtIDnomina.TabIndex = 8;
-            // 
-            // btnGuardarNomina
-            // 
-            this.btnGuardarNomina.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnGuardarNomina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarNomina.Location = new System.Drawing.Point(58, 199);
-            this.btnGuardarNomina.Name = "btnGuardarNomina";
-            this.btnGuardarNomina.Size = new System.Drawing.Size(99, 31);
-            this.btnGuardarNomina.TabIndex = 11;
-            this.btnGuardarNomina.Text = "Guardar";
-            this.btnGuardarNomina.UseVisualStyleBackColor = false;
-            this.btnGuardarNomina.Click += new System.EventHandler(this.btnGuardarNomina_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkOrange;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(182, 199);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 31);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Eliminar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // cbxMes
-            // 
-            this.cbxMes.FormattingEnabled = true;
-            this.cbxMes.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.cbxMes.Location = new System.Drawing.Point(86, 39);
-            this.cbxMes.Name = "cbxMes";
-            this.cbxMes.Size = new System.Drawing.Size(188, 21);
-            this.cbxMes.TabIndex = 9;
             // 
             // cbxAño
             // 
@@ -317,6 +207,108 @@
             this.cbxAño.Size = new System.Drawing.Size(188, 21);
             this.cbxAño.TabIndex = 13;
             // 
+            // cbxMes
+            // 
+            this.cbxMes.FormattingEnabled = true;
+            this.cbxMes.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cbxMes.Location = new System.Drawing.Point(86, 39);
+            this.cbxMes.Name = "cbxMes";
+            this.cbxMes.Size = new System.Drawing.Size(188, 21);
+            this.cbxMes.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkOrange;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(182, 199);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 31);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Eliminar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnGuardarNomina
+            // 
+            this.btnGuardarNomina.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnGuardarNomina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarNomina.Location = new System.Drawing.Point(58, 199);
+            this.btnGuardarNomina.Name = "btnGuardarNomina";
+            this.btnGuardarNomina.Size = new System.Drawing.Size(99, 31);
+            this.btnGuardarNomina.TabIndex = 11;
+            this.btnGuardarNomina.Text = "Generar";
+            this.btnGuardarNomina.UseVisualStyleBackColor = false;
+            this.btnGuardarNomina.Click += new System.EventHandler(this.btnGuardarNomina_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtIDnomina);
+            this.groupBox2.Controls.Add(this.lblIdNomina);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.txtNokmbreempresa);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(573, 78);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Información";
+            // 
+            // txtIDnomina
+            // 
+            this.txtIDnomina.Location = new System.Drawing.Point(430, 22);
+            this.txtIDnomina.Name = "txtIDnomina";
+            this.txtIDnomina.Size = new System.Drawing.Size(136, 20);
+            this.txtIDnomina.TabIndex = 8;
+            // 
+            // lblIdNomina
+            // 
+            this.lblIdNomina.AutoSize = true;
+            this.lblIdNomina.Location = new System.Drawing.Point(369, 25);
+            this.lblIdNomina.Name = "lblIdNomina";
+            this.lblIdNomina.Size = new System.Drawing.Size(55, 13);
+            this.lblIdNomina.TabIndex = 7;
+            this.lblIdNomina.Text = "ID nómina";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Nombre Empresa";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(164, 88);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(163, 20);
+            this.textBox2.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(98, 88);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "label4";
+            // 
             // Cabecera_Nómina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,7 +337,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MonthCalendar calendario;
         private System.Windows.Forms.TextBox txtIDnomina;
         private System.Windows.Forms.Label lblIdNomina;
         private System.Windows.Forms.Label label5;
