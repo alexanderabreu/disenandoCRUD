@@ -30,13 +30,18 @@ namespace disenandoCRUD
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+
+            //SQLiteConnection conn = new SQLiteConnection();
+            //DataTable dgvdatos = new DataTable("select * from detalle_nomina inner join cabecera_nomina,cargo where detalle_id = '" + txtidcn.Text + "' and nomina_id = '" + txtidcn.Text + "' and cargo_id = '" + txtidcn.Text + "' ");
+            //foreach (DataRow dr in dgvdatos.Rows)
+
+            //string IDnomina, Mes, Ano, ISR, SS, Otros, tot_ISR, tot_SS, tot_Otros, t_dedu, sueld, empl_id;
+            //IDnomina = dr["nomina_id"].ToString();
+            //                                              //*pendiente a completar
 
 
-              
-
-            
         }
+        
 
         // Sentencia para agregar Registro de nomina; se agregan todos los campos solicitados y se hace click en en Guardar.
 

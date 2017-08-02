@@ -39,6 +39,7 @@
             this.txtIdCargo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DTGVcargo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,17 +70,18 @@
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnCerrar.Location = new System.Drawing.Point(289, 62);
+            this.btnCerrar.Location = new System.Drawing.Point(217, 66);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(62, 30);
             this.btnCerrar.TabIndex = 4;
-            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.Text = "Buscar";
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnActualizar
             // 
             this.btnActualizar.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnActualizar.Location = new System.Drawing.Point(199, 63);
+            this.btnActualizar.Location = new System.Drawing.Point(217, 18);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(65, 29);
             this.btnActualizar.TabIndex = 5;
@@ -89,7 +91,7 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.SystemColors.Info;
-            this.btnEliminar.Location = new System.Drawing.Point(289, 17);
+            this.btnEliminar.Location = new System.Drawing.Point(291, 16);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(60, 31);
             this.btnEliminar.TabIndex = 6;
@@ -99,9 +101,9 @@
             // btnCrear
             // 
             this.btnCrear.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.btnCrear.Location = new System.Drawing.Point(198, 17);
+            this.btnCrear.Location = new System.Drawing.Point(145, 18);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(66, 31);
+            this.btnCrear.Size = new System.Drawing.Size(66, 29);
             this.btnCrear.TabIndex = 7;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = false;
@@ -139,12 +141,20 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Nombre del cargo";
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(291, 72);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(60, 20);
+            this.txtBuscar.TabIndex = 12;
+            // 
             // Cargo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(370, 439);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtIdCargo);
@@ -176,5 +186,6 @@
         private System.Windows.Forms.TextBox txtIdCargo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }

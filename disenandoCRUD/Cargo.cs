@@ -18,7 +18,7 @@ namespace disenandoCRUD
     public partial class Cargo : Form
 
     {
-        SQLiteConnection conn;
+        SQLiteConnection conn = new SQLiteConnection();
         public Cargo()
         {
             InitializeComponent();
@@ -26,14 +26,30 @@ namespace disenandoCRUD
         private void CargarDatos()
 
         {
-            SQLiteDataAdapter da = new SQLiteDataAdapter("select * from cargo", conn);
-            DataTable dt = new DataTable("cargo");
+            SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
+            try
+            {
+                conn.Open();
+                MessageBox.Show("Conexion hecha");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error en la conexion");
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            SQLiteDataAdapter da = new SQLiteDataAdapter("Select * from cargo", conn);
+            DataTable dt = new DataTable("Cargo");
             da.Fill(dt);
             DTGVcargo.DataSource = dt;
         }
 
         private void Cargo_Load(object sender, EventArgs e)
         {
+           
             // CREANDO LA CONEXION A LA BASE DE DATOS
             SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
 
@@ -76,6 +92,11 @@ namespace disenandoCRUD
             {
                 conn.Close();
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
