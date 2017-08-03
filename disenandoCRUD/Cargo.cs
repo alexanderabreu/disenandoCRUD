@@ -48,10 +48,10 @@ namespace disenandoCRUD
         }
 
         private void Cargo_Load(object sender, EventArgs e)
-        {
-           
-            // CREANDO LA CONEXION A LA BASE DE DATOS
-            SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
+        { }
+
+        // CREANDO LA CONEXION A LA BASE DE DATOS
+        SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
 
             // AGREGANDO EL CAPTURADOR DE ERROR
             try

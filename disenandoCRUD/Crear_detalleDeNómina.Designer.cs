@@ -36,6 +36,10 @@
             this.TXTtOTALdESCUENTO = new System.Windows.Forms.TextBox();
             this.TXTsALARIOnETO = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtOTROS = new System.Windows.Forms.TextBox();
@@ -55,16 +59,11 @@
             this.DTGVDetalleNomina = new System.Windows.Forms.DataGridView();
             this.ID_DetalleNomina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Salario_Bruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescuentoISR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescuentoSS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescuentosOTROS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SalarioNeto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DTGVDetalleNomina)).BeginInit();
             this.SuspendLayout();
@@ -156,6 +155,42 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles de Nómina";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(176, 224);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Total";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(176, 190);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Total";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(124, 221);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(36, 20);
+            this.textBox5.TabIndex = 28;
+            this.textBox5.Text = "0.03";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(124, 183);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(36, 20);
+            this.textBox3.TabIndex = 27;
+            this.textBox3.Text = "0.04";
             // 
             // label4
             // 
@@ -300,7 +335,6 @@
             this.DTGVDetalleNomina.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_DetalleNomina,
             this.ID_Empleado,
-            this.Salario_Bruto,
             this.DescuentoISR,
             this.DescuentoSS,
             this.DescuentosOTROS,
@@ -322,12 +356,6 @@
             this.ID_Empleado.HeaderText = "ID_Empleado";
             this.ID_Empleado.Name = "ID_Empleado";
             this.ID_Empleado.Width = 80;
-            // 
-            // Salario_Bruto
-            // 
-            this.Salario_Bruto.HeaderText = "Salario_Bruto";
-            this.Salario_Bruto.Name = "Salario_Bruto";
-            this.Salario_Bruto.Width = 80;
             // 
             // DescuentoISR
             // 
@@ -356,42 +384,6 @@
             // 
             this.SalarioNeto.HeaderText = "SalarioNeto";
             this.SalarioNeto.Name = "SalarioNeto";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(124, 183);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(36, 20);
-            this.textBox3.TabIndex = 27;
-            this.textBox3.Text = "0.04";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(124, 221);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(36, 20);
-            this.textBox5.TabIndex = 28;
-            this.textBox5.Text = "0.03";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(176, 190);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Total";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(176, 224);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Total";
             // 
             // Crear_detalleDeNómina
             // 
@@ -435,14 +427,6 @@
         private System.Windows.Forms.Button btnEliminarNomina;
         private System.Windows.Forms.Button btbConsultarNomina;
         private System.Windows.Forms.DataGridView DTGVDetalleNomina;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_DetalleNomina;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Empleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Salario_Bruto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescuentoISR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescuentoSS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescuentosOTROS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalDescuento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SalarioNeto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtOTROS;
@@ -452,5 +436,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_DetalleNomina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescuentoISR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescuentoSS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescuentosOTROS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalDescuento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SalarioNeto;
     }
 }

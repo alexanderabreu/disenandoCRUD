@@ -46,14 +46,14 @@ namespace disenandoCRUD
 
             Cabecera_Nómina cabecerra = new Cabecera_Nómina();
             cabecerra.ShowDialog();
-            this.Enabled = false;
+            this.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Cargo kRGO = new Cargo();
             kRGO.ShowDialog();
-            this.Enabled = false;
+            this.Enabled = true;
         }
     }
 }
