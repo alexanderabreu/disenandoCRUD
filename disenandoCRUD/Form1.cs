@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Windows.Forms.Design;
+using System.IO;
 
 
 
@@ -15,7 +17,7 @@ namespace disenandoCRUD
 {
     public partial class frmInsertarEmpelado : Form
     {
-      
+
         public frmInsertarEmpelado()
         {
             InitializeComponent();
@@ -61,9 +63,10 @@ namespace disenandoCRUD
                 string fk_id_cargo = txtfkidcargo.Text;
                 string nac = tbxFechanacimiento.Text;
                 string ingr = tbxFechaingreso.Text;
-
+                pictureBox1.Image = pictureBox1.Image;
+                
                 // INGRESANDO DATOS A LA BASE DE DATOS VIA CRUD
-                string sql = "insert into empleado(nombre_empleado, apellido_empleado, cedula_empleado, sexo_empleado, salario_empleado, fk_id_cargo, Fecha_ingreso, Fecha_nacimiento) values('" + nom + "','" + apel + "','" + ced + "','" + sex + "','" + sal + "','" + fk_id_cargo + "','"+nac+"','"+ingr+"') ";
+                string sql = "insert into empleado(nombre_empleado, apellido_empleado, cedula_empleado, sexo_empleado, salario_empleado, fk_id_cargo, Fecha_ingreso, Fecha_nacimiento, Foto) values('" + nom + "','" + apel + "','" + ced + "','" + sex + "','" + sal + "','" + fk_id_cargo + "','"+nac+"','"+ingr+"') ";
                 SQLiteCommand cmd = new SQLiteCommand(sql, conn);
                 cmd.ExecuteNonQuery();
 
@@ -118,6 +121,37 @@ namespace disenandoCRUD
             Cargo krgo = new Cargo();
             krgo.ShowDialog();
             this.Enabled = true;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+
+        {
+            pictureBox1.Image = Image.FromFile("user.jpg");
+
+        }
+
+        private void btnCalcularedad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExaminar_Click(object sender, EventArgs e)
+        
+        {
+            var ImgEmpleado = pictureBox1;
+
+            OpenFileDialog getImage = new OpenFileDialog();
+            getImage.InitialDirectory = "C:\\";
+            getImage.Filter = "Formatos de imagen (*.jpg)(*.jpeg)|*.jpg;*.jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
+
+            if (getImage.ShowDialog() == DialogResult.OK)
+            {
+               ImgEmpleado.ImageLocation = getImage.FileName;
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione foto", "Sin seleccion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

@@ -48,7 +48,7 @@ namespace disenandoCRUD
         }
 
         private void Cargo_Load(object sender, EventArgs e)
-        { }
+        { 
 
         // CREANDO LA CONEXION A LA BASE DE DATOS
         SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
@@ -98,7 +98,63 @@ namespace disenandoCRUD
         {
 
         }
+
+        private void DTGVcargo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
+            SQLiteCommand cmd = new SQLiteCommand ("Select * from cargo", conn);
+
+            try
+            {
+
+                SQLiteDataAdapter da = new SQLiteDataAdapter();
+                da.SelectCommand = cmd;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                BindingSource bsource = new BindingSource();
+                bsource.DataSource = dt;
+                DTGVcargo.DataSource = bsource;
+                da.Update(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error, favor revise listado de cargo");
+            }
+            finally
+            { 
+                conn.Close();
+            }
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            SQLiteConnection conn = new SQLiteConnection("Data Source=C:\\DB\\nominaCRUD.sqlite");
+            SQLiteCommand cmd = new SQLiteCommand("Select * from cargo", conn);
+
+            try
+            {
+
+                SQLiteDataAdapter da = new SQLiteDataAdapter();
+                da.SelectCommand = cmd;
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                BindingSource bsource = new BindingSource();
+                bsource.DataSource = dt;
+                DTGVcargo.DataSource = bsource;
+                da.Update(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error, favor revise listado de cargo");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
-}
+    }
+    
+
     
 

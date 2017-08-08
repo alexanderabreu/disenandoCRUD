@@ -147,6 +147,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -161,6 +162,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empeladonomina2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calcular_nomina_para_trabajadores.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nomina %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empeladoss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setting-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo empesa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puesto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconos-cargos-03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calcular_nomina_para_trabajadores1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.2\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.2\build\net451\System.Data.SQLite.Core.targets')" />

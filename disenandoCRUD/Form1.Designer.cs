@@ -58,6 +58,7 @@
             this.frmEmpleado = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnExaminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -66,6 +67,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnExaminar);
             this.groupBox1.Controls.Add(this.txtfkidcargo);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -114,6 +116,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(175, 194);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label7
             // 
@@ -277,6 +280,7 @@
             this.btnCalcularedad.TabIndex = 16;
             this.btnCalcularedad.Text = "Calcular Edad";
             this.btnCalcularedad.UseVisualStyleBackColor = true;
+            this.btnCalcularedad.Click += new System.EventHandler(this.btnCalcularedad_Click);
             // 
             // tbxCalcularantiguedad
             // 
@@ -341,6 +345,16 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // btnExaminar
+            // 
+            this.btnExaminar.Location = new System.Drawing.Point(338, 234);
+            this.btnExaminar.Name = "btnExaminar";
+            this.btnExaminar.Size = new System.Drawing.Size(111, 23);
+            this.btnExaminar.TabIndex = 16;
+            this.btnExaminar.Text = "Examinar";
+            this.btnExaminar.UseVisualStyleBackColor = true;
+            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
+            // 
             // frmInsertarEmpelado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,6 +414,7 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.TextBox txtfkidcargo;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnExaminar;
     }
 }
 

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.DTGVcargo = new System.Windows.Forms.DataGridView();
-            this.id_cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre_cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -40,32 +38,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnRefrescar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DTGVcargo)).BeginInit();
             this.SuspendLayout();
             // 
             // DTGVcargo
             // 
             this.DTGVcargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DTGVcargo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_cargo,
-            this.nombre_cargo});
             this.DTGVcargo.Location = new System.Drawing.Point(10, 98);
             this.DTGVcargo.Name = "DTGVcargo";
-            this.DTGVcargo.Size = new System.Drawing.Size(341, 339);
+            this.DTGVcargo.Size = new System.Drawing.Size(436, 339);
             this.DTGVcargo.TabIndex = 1;
-            // 
-            // id_cargo
-            // 
-            this.id_cargo.HeaderText = "id_cargo";
-            this.id_cargo.Name = "id_cargo";
-            // 
-            // nombre_cargo
-            // 
-            this.nombre_cargo.HeaderText = "nombre_cargo";
-            this.nombre_cargo.Name = "nombre_cargo";
-            this.nombre_cargo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.nombre_cargo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.nombre_cargo.Width = 200;
+            this.DTGVcargo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTGVcargo_CellContentClick);
             // 
             // btnCerrar
             // 
@@ -145,15 +129,26 @@
             // 
             this.txtBuscar.Location = new System.Drawing.Point(291, 72);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(60, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(147, 20);
             this.txtBuscar.TabIndex = 12;
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.Location = new System.Drawing.Point(363, 23);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(75, 23);
+            this.btnRefrescar.TabIndex = 13;
+            this.btnRefrescar.Text = "Refrescar";
+            this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // Cargo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(370, 439);
+            this.ClientSize = new System.Drawing.Size(450, 438);
+            this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -176,8 +171,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DTGVcargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_cargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_cargo;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
@@ -187,5 +180,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button btnRefrescar;
     }
 }
